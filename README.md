@@ -18,8 +18,8 @@ https://www.postgresql.org/
 
 ## Dockerfile 使用方法
 
-## 如何使用
-## 启动postgres实例
+### 如何使用
+### 启动postgres实例
 ```
 $ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 ```
@@ -28,11 +28,11 @@ $ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postg
 postgres数据库是用于用户，实用程序和第三方应用程序使用的默认数据库。
 postgresql.org/docs
 ```
-## 从应用程序连接到它
+### 从应用程序连接到它
 ```
 $ docker run --name some-app --link some-postgres:postgres -d application-that-uses-postgres
 ```
-或通过 psql
+### 或通过 psql
 ```
 $ docker run -it --rm --link some-postgres:postgres postgres psql -h postgres -U postgres
 psql (9.5.0)
